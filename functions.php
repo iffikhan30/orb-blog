@@ -134,6 +134,8 @@ function orb_blog_setup() {
 		)
 	);
 
+	add_editor_style( 'css/custom-editor-style.css' );
+
 }
 add_action( 'after_setup_theme', 'orb_blog_setup' );
 
@@ -205,20 +207,6 @@ function orb_blog_widgets_init() {
 }
 add_action( 'widgets_init', 'orb_blog_widgets_init' );
 
-/**
-* Enqueue theme fonts.
-*/
-function orb_blog_fonts() {
-	$fonts_url = orb_blog_get_fonts_url();
-
-	// Load Fonts if necessary.
-	if ( $fonts_url ) {
-		require_once get_theme_file_path( 'inc/wptt-webfont-loader.php' );
-		wp_enqueue_style( 'orb-blog-fonts', wptt_get_webfont_url( $fonts_url ), array(), null );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'orb_blog_fonts', 1 );
-add_action( 'enqueue_block_editor_assets', 'orb_blog_fonts', 1 );
 
 /**
  * Retrieve webfont URL to load fonts locally.
