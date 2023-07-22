@@ -8,10 +8,8 @@
  *
  * @package Orb_Blog
  */
-
 ?>
 	</div><!-- #content -->
-
 	<footer id="colophon" class="site-footer">
 		<div class="container">
 			<?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
@@ -53,8 +51,6 @@
 		</div><!-- .container -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
-
 </body>
 </html>
