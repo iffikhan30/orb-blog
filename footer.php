@@ -47,7 +47,7 @@
 		$footer_copyright_text = get_theme_mod('footer_copyright_text', 'Copyright © 2023 Orb Blog. All Rights Reserved.');
 		if ( ! empty( $footer_copyright_text ) ) { ?>
 			<div class="site-info">
-				<?php echo $footer_copyright_text; ?>
+				<?php echo esc_html_e($footer_copyright_text,'orb-blog'); ?>
 			</div><!-- .site-info -->
 		<?php } ?>
 		</div><!-- .container -->

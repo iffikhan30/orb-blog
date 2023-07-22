@@ -112,10 +112,10 @@ function orb_blog_setup() {
 	register_block_pattern(
 		'orb-pattern',
 		array(
-		  'title'       => 'Orb Title',
-		  'description' => 'Orb description.',
+		  'title'       => __('Orb Title','orb-blog'),
+		  'description' => __('Orb description.','orb-blog'),
 		  'categories'  => array( 'uncategorized' ),
-		  'content'     => '<!-- Block pattern content goes here -->',
+		  'content'     => __('<!-- Block pattern content goes here -->','orb-blog'),
 		)
 	);
 
@@ -128,7 +128,7 @@ function orb_blog_setup() {
 	register_block_style(
 		'orb-style',
 		array(
-		  'label'   => 'Orb Style',
+		  'label'   => __('Orb Style','orb-blog'),
 		  'name'    => 'orb-style',
 		  'inline_style' => '.wp-block-quote.is-style-blue-quote { body:#F00; }',
 		)
