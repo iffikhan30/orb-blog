@@ -42,10 +42,10 @@
 			<?php endif; ?>
 
 		<?php
-		$footer_copyright_text = get_theme_mod('footer_copyright_text', 'Copyright © 2023 Orb Blog. All Rights Reserved.');
+		$footer_copyright_text = get_theme_mod('footer_copyright_text', __('Copyright © 2023 Orb Blog. All Rights Reserved.','orb-blog'));
 		if ( ! empty( $footer_copyright_text ) ) { ?>
 			<div class="site-info">
-				<?php echo esc_html_e($footer_copyright_text,'orb-blog'); ?>
+				<?php echo $footer_copyright_text; ?>
 			</div><!-- .site-info -->
 		<?php } ?>
 		</div><!-- .container -->
