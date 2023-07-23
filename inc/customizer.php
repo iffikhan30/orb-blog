@@ -15,8 +15,6 @@ function orb_blog_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-	include get_template_directory() . '/inc/upsell-section.php';
-
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
 			'blogname',
@@ -35,21 +33,7 @@ function orb_blog_customize_register( $wp_customize ) {
 	}
 
 	$wp_customize->register_section_type( 'orb_blog_Customize_Upsell_Section' );
-
-	// Register section.
-	$wp_customize->add_section(
-		new orb_blog_Customize_Upsell_Section(
-			$wp_customize,
-			'theme_upsell',
-			array(
-				'title'    => esc_html__( 'Orb Blog Pro', 'orb-blog' ),
-				'pro_text' => esc_html__( 'Buy Pro', 'orb-blog' ),
-				'pro_url'  => 'https://followedtech.com/orb-blog-pro/',
-				'priority' => 10,
-			)
-		)
-	);
-
+	
 	// Footer Section
 	$wp_customize->add_section('section_footer', array(    
 		'title'       => __('Footer Copyright', 'orb-blog'),
