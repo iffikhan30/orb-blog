@@ -31,8 +31,6 @@ function orb_blog_customize_register( $wp_customize ) {
 			)
 		);
 	}
-
-	$wp_customize->register_section_type( 'orb_blog_Customize_Upsell_Section' );
 	
 	// Footer Section
 	$wp_customize->add_section('section_footer', array(    
