@@ -42,7 +42,7 @@
 			<?php endif; ?>
 
 		<?php
-		$footer_copyright_text = get_theme_mod('footer_copyright_text', __('Copyright © 2023 Orb Blog. All Rights Reserved.','orb-blog'));
+		$footer_copyright_text = get_theme_mod('footer_copyright_text', __('Copyright © 2023 Orb Blog - Wordpress Theme by <a href="https://happytalesforkids.com/">Happy Tales for Kids</a>.','orb-blog'));
 		if ( ! empty( $footer_copyright_text ) ) { ?>
 			<div class="site-info">
 				<?php echo esc_html($footer_copyright_text); ?>
